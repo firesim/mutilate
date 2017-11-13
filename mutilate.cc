@@ -451,6 +451,7 @@ int main(int argc, char **argv) {
 
 #ifdef HAVE_LIBZMQ
   if (args.agentmode_given) {
+      printf("starting agent\n");
     agent();
     return 0;
   } else if (args.agent_given) {
