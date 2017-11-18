@@ -281,7 +281,7 @@ void prep_agent(const vector<string>& servers, options_t& options) {
   // memcached server before the master, so that the master is never
   // the very first set of connections.  Is this reasonable or
   // necessary?  Most probably not.
-  V("MASTER SLEEPS"); sleep_time(1.5);
+  V("MASTER SLEEPS"); sleep_time(0.1);
 }
 
 void finish_agent(ConnectionStats &stats) {
@@ -557,8 +557,8 @@ int main(int argc, char **argv) {
     int max = atoi(max_ptr);
     int step = atoi(step_ptr);
 
-    printf("%-7s %7s %7s %7s %7s %7s %7s %7s %7s %8s %8s\n",
-           "#type", "avg", "min", "1st", "5th", "10th",
+    printf("%-7s %7s %7s %7s %7s %7s %7s %7s %7s %7s %8s %8s\n",
+           "#type", "avg", "min", "1st", "5th", "10th", "50th",
            "90th", "95th", "99th", "QPS", "target");
 
     for (int q = min; q <= max; q += step) {
