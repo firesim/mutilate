@@ -1,3 +1,11 @@
+IMPORTANT
+=========
+
+This is not the original Mutilate repo, this is a fork with some tweaks for experiments on FireSim. You can find the original Mutilate here: https://github.com/leverich/mutilate
+
+Below is the README.md from the upstream repo.
+
+
 Mutilate [![Build Status](https://img.shields.io/travis/dterei/mutilate.svg?style=flat)](https://travis-ci.org/dterei/mutilate)
 ========
 
